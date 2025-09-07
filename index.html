@@ -67,12 +67,6 @@
                 <p class="text-sm mt-1">台南市北門區</p>
             </a>
 
-            <!-- 菌寶貝博物館暨觀光工廠 (綠色) -->
-            <a href="https://www.junbaby.com.tw/" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-green-500 hover:bg-green-600">
-                <h2 class="text-2xl font-bold">菌寶貝博物館暨觀光工廠</h2>
-                <p class="text-sm mt-1">宜蘭市</p>
-            </a>
-
             <!-- 高醫校史暨南台灣醫療史料館 (藍色) -->
             <a href="https://mkhs.kmu.edu.tw/" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-blue-500 hover:bg-blue-600">
                 <h2 class="text-2xl font-bold">高醫校史暨南台灣醫療史料館</h2>
@@ -103,6 +97,44 @@
                 <p class="text-sm mt-1">台北市</p>
             </a>
             
+            <!-- 影像醫學博物館 (藍色) -->
+            <a href="https://rad.ypu.edu.tw/p/412-1030-247.php?Lang=zh-tw" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-blue-500 hover:bg-blue-600">
+                <h2 class="text-2xl font-bold">影像醫學博物館</h2>
+                <p class="text-sm mt-1">新竹市香山區</p>
+            </a>
+
+            <!-- 菌寶貝博物館暨觀光工廠 (綠色) -->
+            <a href="https://www.junbaby.com.tw/" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-green-500 hover:bg-green-600">
+                <h2 class="text-2xl font-bold">菌寶貝博物館暨觀光工廠</h2>
+                <p class="text-sm mt-1">宜蘭市</p>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- 網頁互動功能 JavaScript -->
+    <script>
+        // 篩選按鈕功能
+        function filterButtons() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const buttons = document.getElementById('buttonContainer').getElementsByTagName('a');
+
+            // 遍歷所有按鈕，如果內容包含搜尋文字則顯示
+            for (let i = 0; i < buttons.length; i++) {
+                const buttonText = buttons[i].textContent || buttons[i].innerText;
+                if (buttonText.toUpperCase().indexOf(filter) > -1) {
+                    buttons[i].style.display = "";
+                } else {
+                    buttons[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
             <!-- 影像醫學博物館 (藍色) -->
             <a href="https://rad.ypu.edu.tw/p/412-1030-247.php?Lang=zh-tw" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-blue-500 hover:bg-blue-600">
                 <h2 class="text-2xl font-bold">影像醫學博物館</h2>
