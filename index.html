@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣醫學與護理主題博物館與展覽總覽</title>
+    <!-- 載入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* 淺灰色背景 */
+            color: #1f2937;
+        }
+        .button-link {
+            transition: all 0.3s ease;
+            position: relative;
+            transform: scale(1);
+            color: white; /* 讓文字在彩色背景上更明顯 */
+        }
+        .button-link:hover {
+            transform: scale(1.03); /* 放大效果 */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- 標題區塊 -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-blue-800">
+                <div class="mb-1">台灣醫學與護理主題</div>
+                <div class="text-3xl sm:text-4xl">博物館總覽</div>
+            </h1>
+        </header>
+
+        <!-- 搜尋與篩選區塊 -->
+        <div class="mb-8 max-w-2xl mx-auto">
+            <input 
+                type="text" 
+                id="searchInput" 
+                onkeyup="filterButtons()" 
+                placeholder="輸入關鍵字搜尋，例如：台北、護理、烏腳病..." 
+                class="w-full p-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 shadow-md transition-all duration-200 text-base sm:text-lg"
+            >
+        </div>
+
+        <!-- 按鈕展示區塊 -->
+        <div id="buttonContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- 臺大醫學人文博物館 (藍色) -->
+            <a href="https://www.mc.ntu.edu.tw/mmh/Index.action" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-blue-500 hover:bg-blue-600">
+                <h2 class="text-2xl font-bold">臺大醫學人文博物館</h2>
+                <p class="text-sm mt-1">台北市</p>
+            </a>
+
+            <!-- 秀傳醫學博物館 (紫色) -->
+            <a href="https://bookmarktrip.com/changhua-travel/lukang-cbshow-museum/" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-purple-500 hover:bg-purple-600">
+                <h2 class="text-2xl font-bold">秀傳醫學博物館</h2>
+                <p class="text-sm mt-1">彰化鹿港</p>
+            </a>
+
+            <!-- 王金河烏腳病醫療紀念館 (橘色) -->
+            <a href="http://www.blackfoot.org.tw/" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-orange-500 hover:bg-orange-600">
+                <h2 class="text-2xl font-bold">王金河烏腳病醫療紀念館</h2>
+                <p class="text-sm mt-1">台南市北門區</p>
+            </a>
+
+            <!-- 菌寶貝博物館暨觀光工廠 (綠色) -->
+            <a href="https://www.junbaby.com.tw/" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-green-500 hover:bg-green-600">
+                <h2 class="text-2xl font-bold">菌寶貝博物館暨觀光工廠</h2>
+                <p class="text-sm mt-1">宜蘭市</p>
+            </a>
+
+            <!-- 高醫校史暨南台灣醫療史料館 (藍色) -->
+            <a href="https://mkhs.kmu.edu.tw/" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-blue-500 hover:bg-blue-600">
+                <h2 class="text-2xl font-bold">高醫校史暨南台灣醫療史料館</h2>
+                <p class="text-sm mt-1">高雄醫學大學</p>
+            </a>
+
+            <!-- 輔仁大學醫學人文博物館 (藍色) -->
+            <a href="http://mmh.mc.fju.edu.tw/layout/onebrown/vvindex.jsp" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-blue-500 hover:bg-blue-600">
+                <h2 class="text-2xl font-bold">輔仁大學醫學人文博物館</h2>
+                <p class="text-sm mt-1">新北市新莊區</p>
+            </a>
+
+            <!-- 馬雅各醫學紀念館 (橘色) -->
+            <a href="https://www.sinlau.org.tw/mode02.asp?m=201102171435042&t=sub" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-orange-500 hover:bg-orange-600">
+                <h2 class="text-2xl font-bold">馬雅各醫學紀念館</h2>
+                <p class="text-sm mt-1">台南市</p>
+            </a>
+            
+            <!-- 新樓故事館／史料館 (橘色) -->
+            <a href="https://tcnn.org.tw/archives/229348" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-orange-500 hover:bg-orange-600">
+                <h2 class="text-2xl font-bold">新樓故事館／史料館</h2>
+                <p class="text-sm mt-1">台南市</p>
+            </a>
+
+            <!-- 台灣護理學會歷史館 (粉色) -->
+            <a href="https://www.twna.org.tw/WebPad/WebPad.aspx?1x8jyHnXeNQghQ1DAsaG8A%3D%3D" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-pink-500 hover:bg-pink-600">
+                <h2 class="text-2xl font-bold">台灣護理學會歷史館</h2>
+                <p class="text-sm mt-1">台北市</p>
+            </a>
+            
+            <!-- 影像醫學博物館 (藍色) -->
+            <a href="https://rad.ypu.edu.tw/p/412-1030-247.php?Lang=zh-tw" target="_blank" class="button-link rounded-2xl p-6 shadow-md flex flex-col justify-center items-center text-center bg-blue-500 hover:bg-blue-600">
+                <h2 class="text-2xl font-bold">影像醫學博物館</h2>
+                <p class="text-sm mt-1">新竹市香山區</p>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- 網頁互動功能 JavaScript -->
+    <script>
+        // 篩選按鈕功能
+        function filterButtons() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const buttons = document.getElementById('buttonContainer').getElementsByTagName('a');
+
+            // 遍歷所有按鈕，如果內容包含搜尋文字則顯示
+            for (let i = 0; i < buttons.length; i++) {
+                const buttonText = buttons[i].textContent || buttons[i].innerText;
+                if (buttonText.toUpperCase().indexOf(filter) > -1) {
+                    buttons[i].style.display = "";
+                } else {
+                    buttons[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
